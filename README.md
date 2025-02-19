@@ -1,4 +1,4 @@
-**SportsDataBackup**
+**SPORTS DATA BACKUP**
 
 **Prerequisites**
 Before running the scripts, ensure you have the following:
@@ -24,6 +24,8 @@ Copy your AWS Account ID Once logged in to the AWS Management Console Click on y
 You can check to see if you have an access key in the IAM dashboard Under Users, click on a user and then "Security Credentials" Scroll down until you see the Access Key section You will not be able to retrieve your secret access key so if you don't have that somewhere, you need to create an access key.
 
 **Technical Diagram**
+![image](https://github.com/user-attachments/assets/68700099-6432-4b45-bf2f-716c4c7e0016)
+
 
 
 **START HERE**
