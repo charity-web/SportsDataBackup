@@ -1,4 +1,5 @@
 **SPORTS DATA BACKUP**
+BackupHighlights automates fetching sports highlights, stores data in S3 and DynamoDB, processes videos, and runs on a schedule using ECS Fargate and EventBridge. It uses templated JSON files with environment variable injection for easy configuration and deployment.
 
 **Prerequisites**
 Before running the scripts, ensure you have the following:
@@ -125,6 +126,8 @@ docker tag sports-backup:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaw
 ```
 docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/sports-backup:latest
 ```
+![image](https://github.com/user-attachments/assets/3bca0c12-88b9-46b0-adaa-827d34b17969)
+
 **Step 6: Create AWS Resources**
 1. Register the ECS Task Definition
 ```
@@ -167,6 +170,13 @@ aws ecs run-task \
   --network-configuration "awsvpcConfiguration={subnets=[\"${SUBNET_ID}\"],securityGroups=[\"${SECURITY_GROUP_ID}\"],assignPublicIp=\"ENABLED\"}" \
   --region ${AWS_REGION}
 ```
+![image](https://github.com/user-attachments/assets/dbf4ebf5-295f-4f99-9bf3-84e9f2c72cbe)
+
+![image](https://github.com/user-attachments/assets/ba9f27f3-d3fc-4c52-b35e-6672f96215e2)
+
+![image](https://github.com/user-attachments/assets/05306f23-34df-4c59-9389-886594c94e28)
+
+
 **What We Learned**
 1. Using templates to generate json files
 2. Integrating DynamoDB to store data backup
